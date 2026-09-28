@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation — Closeout for Jira | Verbatim Labs</title>
+<style>
+  :root { --ink:#14233A; --teal:#2A9D8F; --slate:#6B7A90; --paper:#FBFAF8; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 24px 96px; }
+  .brand { font-weight:700; font-size:20px; letter-spacing:-0.01em; }
+  .brand .dot { color:var(--teal); }
+  h1 { font-size:34px; letter-spacing:-0.02em; margin:28px 0 6px; }
+  .meta { color:var(--slate); font-size:15px; margin-bottom:40px; }
+  h2 { font-size:22px; margin:44px 0 12px; letter-spacing:-0.01em; }
+  h3 { font-size:17px; margin:26px 0 6px; }
+  p, li { font-size:16px; }
+  ul, ol { padding-left:22px; }
+  li { margin:6px 0; }
+  a { color:var(--teal); }
+  .rule { height:1px; background:#E6E2DC; border:0; margin:44px 0; }
+  .foot { color:var(--slate); font-size:14px; margin-top:48px; }
+  .callout { background:#fff; border:1px solid #E6E2DC; border-radius:12px; padding:18px 20px; margin:22px 0; }
+  .step { background:#fff; border:1px solid #E6E2DC; border-radius:12px; padding:20px 22px; margin:16px 0; }
+  .step h3 { margin-top:0; }
+  code { background:#EEF1F0; padding:1px 6px; border-radius:5px; font-size:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">verbatim<span class="dot">.</span>labs</div>
+  <h1>Closeout for Jira — Documentation</h1>
+  <p class="meta">How to install and use Closeout for Jira.</p>
+
+  <p>Closeout turns a Jira project or epic — its data <em>and</em> its discussion — into a
+  complete, governance-grade closure report, published straight to Confluence. It computes
+  the hard numbers, drafts the narrative from your comments, asks you for anything Jira can't
+  supply, and lets you review before it publishes.</p>
+
+  <div class="callout">
+    <strong>What you need:</strong> a Jira Cloud site with Confluence, and Atlassian Rovo
+    enabled. Closeout runs on Atlassian Forge and Rovo — nothing leaves your Atlassian cloud.
+  </div>
+
+  <h2>Installing</h2>
+  <ol>
+    <li>Find <strong>Closeout for Jira</strong> on the Atlassian Marketplace and select
+      <strong>Get it now</strong> (or install from the link shared with you).</li>
+    <li>Choose the Jira site to install it on and confirm the requested permissions.</li>
+    <li>Once installed, Closeout appears as a <strong>Closeout tab</strong> on your Jira
+      projects, and as a <strong>Closeout panel</strong> on epics.</li>
+  </ol>
+
+  <h2>Generating a report for a whole project</h2>
+  <div class="step">
+    <h3>1. Open the Closeout tab</h3>
+    <p>Go to any Jira project and select the <strong>Closeout</strong> tab in the project
+    navigation. Closeout automatically detects which project you're in.</p>
+  </div>
+  <div class="step">
+    <h3>2. Set your options</h3>
+    <p>Choose the Confluence space to publish to, and decide whether to include a
+    <strong>Project overview</strong> and <strong>Budget</strong> section — you can provide
+    these yourself, or have Closeout draft them for your review. Add any extra context in the
+    optional notes field.</p>
+  </div>
+  <div class="step">
+    <h3>3. Start the report</h3>
+    <p>Select <strong>Start closure report</strong>. Closeout opens in Rovo chat, reads your
+    project, and drafts the report. It will ask you for anything it needs (such as the budget
+    figure or the project objective) — you can answer, or ask it to suggest a draft.</p>
+  </div>
+  <div class="step">
+    <h3>4. Review, then publish</h3>
+    <p>Closeout shows you the full draft and asks whether to publish or change anything.
+    Nothing is published until you confirm. Once you do, it creates a Confluence page and
+    gives you the link — and, if you asked, posts a summary comment back on a Jira issue.</p>
+  </div>
+
+  <h2>Generating a report for a single epic</h2>
+  <p>Open an <strong>epic</strong> in Jira and use the <strong>Closeout</strong> panel on the
+  issue. The flow is the same as above, but the report is scoped to that epic and its child
+  issues rather than the whole project. (On non-epic issues, the panel explains that Closeout
+  runs on epics and projects.)</p>
+
+  <h2>What's in the report</h2>
+  <p>Each report contains:</p>
+  <ul>
+    <li><strong>Project overview</strong> — objective and scope (you provide, or Closeout drafts).</li>
+    <li><strong>Schedule performance</strong> — delivery against tracked due dates.</li>
+    <li><strong>Budget performance</strong> — figures and variance (you provide, or mark not tracked).</li>
+    <li><strong>Actuals against estimated hours</strong> — logged effort and coverage.</li>
+    <li><strong>Quality performance</strong> — defects, reopens, and resolution times.</li>
+    <li><strong>Risk performance</strong> — synthesised from the project's discussion, with issue references.</li>
+    <li><strong>Lessons learned and recommendations</strong> — transferable takeaways, including what went well.</li>
+    <li><strong>Project outcomes</strong> — what was delivered, drawn from the record.</li>
+  </ul>
+  <p>Computed sections (schedule, actuals, quality) come straight from Jira data. Narrative
+  sections (risk, lessons, outcomes) are synthesised from your project's comments and
+  discussion. Closeout never invents a figure it can't know, and clearly flags anything that
+  needs your input before sharing.</p>
+
+  <h2>Good to know</h2>
+  <ul>
+    <li>Closeout produces a <strong>draft</strong> for you to finish — you review everything before it publishes.</li>
+    <li>Once published, the report is an ordinary Confluence page you can edit, share, or export.</li>
+    <li>Report quality improves with the quality of your project's discussion — the more context in your comments, the richer the narrative sections.</li>
+  </ul>
+
+  <h2>Support</h2>
+  <p>Questions or issues? Email <a href="mailto:fitzpax@gmail.com">fitzpax@gmail.com</a> and
+  we'll help. See also our <a href="./">privacy policy</a>.</p>
+
+  <hr class="rule">
+  <p class="foot">Closeout for Jira, by Verbatim Labs · Sydney, Australia ·
+  <a href="mailto:fitzpax@gmail.com">fitzpax@gmail.com</a></p>
+</div>
+</body>
+</html>
